@@ -8,7 +8,7 @@ ini_set('error_log', 'public_html/kl2ag2/errorlog.txt');
 
 define('DINC', 'inc/');
 define('DBASE', 'db/');
-chmod(DBASE, 777);
+//chmod(DBASE, 777);
 require_once(DINC.'functions.php');
 
 require_once(DBASE.'db.php');
@@ -16,6 +16,7 @@ $dbfile=DBASE.'db.sqlite';
 $db=null;
 $mode=PDO::FETCH_ASSOC;
 init_baza($dbfile);
+init_tables();
 //db_exec($initstr);
 require_once(DINC.'user.php');
 $user = new user();
